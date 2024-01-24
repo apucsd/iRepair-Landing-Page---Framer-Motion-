@@ -1,8 +1,17 @@
 import { ReactNode } from "react";
 
-const Container = ({ children }: { children: ReactNode }) => {
+const Container = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className: string;
+}) => {
+  console.log(className);
   return (
-    <div className=" w-full max-w-[1220px] px-[20px] mx-auto">{children}</div>
+    <div className={` w-full max-w-[1220px] px-[20px] mx-auto ${className}`}>
+      {children}
+    </div>
   );
 };
 
