@@ -1,11 +1,10 @@
-import Container from "@/components/ui/Container";
 import HeroSection from "./HeroSection";
 
 const Home = () => {
   return (
-    <Container>
+    <div className="overflow-hidden">
       <HeroSection></HeroSection>
-    </Container>
+    </div>
   );
 };
 
