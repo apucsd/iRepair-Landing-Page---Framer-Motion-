@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# iRepair React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to iRepair, a React app built with TypeScript, Framer Motion, and Shadcn for stunning visual effects.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+iRepair is a modern and user-friendly application designed to showcase the power of React and its ecosystem. With TypeScript for static typing, Framer Motion for smooth animations, and Shadcn for advanced shadow effects, this project aims to provide a seamless user experience.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React:** Utilizing the power of React for building scalable and maintainable user interfaces.
+- **TypeScript:** Enhancing code quality and developer productivity with static typing.
+- **Framer Motion:** Bringing life to the application with fluid animations and transitions.
+- **Shadcn:** Elevating the visual appeal with advanced and customizable shadow effects.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. **Clone the repository:**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   ```bash
+   git clone https://github.com/apucsd/iRepair.git
+   cd iRepair
+   npm install
+   npm run dev
+   ```
+
+## Dependencies
+- React: https://reactjs.org/
+- TypeScript: https://www.typescriptlang.org/
+- Framer Motion: https://www.framer.com/motion/
+- Shadcn: https://github.com/codrops/Shadcn
