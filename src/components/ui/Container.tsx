@@ -4,7 +4,7 @@ const Container = ({
   className,
 }: {
   children: ReactNode;
-  className: string;
+  className?: string;
 }) => {
   return (
     <div className={` w-full max-w-[1220px] px-[20px] mx-auto ${className}`}>
