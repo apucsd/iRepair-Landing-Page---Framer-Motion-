@@ -9,7 +9,7 @@ const DataRecovery = () => {
         scale: scaleValues,
         opacity: scaleValues,
       }}
-      className=" bg-[#F2F2F2] rounded-md h-[448px] col-span-7 p-5"
+      className=" bg-[#F2F2F2] rounded-md h-[448px] col-span-12 lg:col-span-7 p-5"
     >
       <h3 className="text-[30px] font-semibold">Data Recovery</h3>
       <h2 className="text-[36px] mt-[60px]">

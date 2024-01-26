@@ -23,12 +23,12 @@ const Services = () => {
           <DataRecovery></DataRecovery>
 
           <StorageReplaceMent></StorageReplaceMent>
-          <div className="bg-[#F2F2F2] rounded-md h-[448px] col-span-4 p-5">
+          <div className="bg-[#F2F2F2] rounded-md h-[448px] col-span-12 lg:col-span-4 p-5">
             <h1 className="text-[80px] font-semibold">
               Same Day <span className="text-[#00E0B0]">Delivery</span>
             </h1>
           </div>
-          <div className="bg-[#F2F2F2] rounded-md h-[448px] col-span-4 p-5">
+          <div className="bg-[#F2F2F2] rounded-md h-[448px] col-span-12 lg:col-span-4 p-5">
             <h1 className="text-[80px] font-semibold">
               <span className="text-[#00E0B0]">Free</span>
               <br />
@@ -39,7 +39,7 @@ const Services = () => {
               </span>
             </h1>
           </div>
-          <div className="bg-[#F2F2F2] rounded-md h-[448px] col-span-4 p-5">
+          <div className="bg-[#F2F2F2] rounded-md h-[448px] col-span-12 lg:col-span-4 p-5">
             <h1 className="text-[80px] font-semibold textr">
               Remote
               <br />
