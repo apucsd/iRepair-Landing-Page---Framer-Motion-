@@ -12,7 +12,11 @@ const ServiceList = () => {
   });
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="text-5xl text-blue-600 font-bold text-center flex justify-center items-center min-h-screen">
+        Loading...
+      </div>
+    );
   }
   console.log(data);
   return (
