@@ -1,25 +1,42 @@
 import { Button } from "@/components/ui/button";
-import { useMutation } from "@tanstack/react-query";
-import { Controller, useForm } from "react-hook-form";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { SubmitHandler, useForm } from "react-hook-form";
 import Select from "react-select";
+type TService = {
+  name: string;
+  description: string;
+  price: number;
+  devices: string[];
+};
 const AddService = () => {
-  const { isError, isSuccess, mutateAsync } = useMutation({
+  const queryClient = useQueryClient();
+  const { isError, isSuccess, mutateAsync } = useMutation<
+    void,
+    Error,
+    TService
+  >({
     mutationFn: async (data) => {
-      return await fetch(`http://localhost:5000/api/v1/services`, {
+      await fetch(`http://localhost:5000/api/v1/services`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
+      // Since we don't have a specific response to return, use void
+      return;
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["services"] });
     },
   });
-  const { handleSubmit, setValue, register } = useForm();
-  const onSubmit = async (data) => {
-    data.price = parseFloat(data.price);
+  const { handleSubmit, setValue, register } = useForm<TService>();
+
+  const onSubmit: SubmitHandler<TService> = async (data) => {
     await mutateAsync(data);
     console.log(data);
   };
+
   console.log({ isError, isSuccess });
   const options = [
     { value: "laptop", label: "Laptop" },
