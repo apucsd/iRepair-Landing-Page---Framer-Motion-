@@ -11,7 +11,12 @@ import { Button } from "@/components/ui/button";
 import { Trash2 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import { useGetServices } from "@/api/admin/service.hook";
-
+type TService = {
+  id: string;
+  name: string;
+  price: string;
+  description: string;
+};
 const ServiceList = () => {
   const { data: services, isLoading, isError } = useGetServices();
 
@@ -44,7 +49,7 @@ const ServiceList = () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {services.map((service) => (
+          {services.map((service: TService) => (
             <TableRow key={service.id}>
               <TableCell className="font-medium">{service.name}</TableCell>
               <TableCell>{service.description}</TableCell>

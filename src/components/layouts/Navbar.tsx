@@ -13,6 +13,9 @@ const Navbar = () => {
           <NavLink to="/login">
             <Button>Login</Button>
           </NavLink>
+          <NavLink to="/admin">
+            <Button>Dashboard</Button>
+          </NavLink>
         </ul>
       </nav>
     </header>
